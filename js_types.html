@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+    <!--inline js example-->
+     <button onclick="alert('inline js example')"> click me inline</button>
+       
+     <!--intenal js example-->
+     <button onclick="showmeg1()"> clicl me intenal</button>
+     <button onclick="showmeg2()"> clicl me external</button>
+    </h1>
+    <script>
+        function showmeg1(){
+             alert("this is internal example");
+        }
+    </script>
+    <script>
+        function showmeg1(){
+            alert("this is inaternal example");
+        }
+
+    </script>
+    <script src="js/script.jst" type="text/javascript"></script>
+</body>
+</html>
