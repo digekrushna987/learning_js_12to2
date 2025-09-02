@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        // global scope
+        var x =101;
+        let y =102;
+        const z =103;
+        function scopeExampal(){
+            var x =1; //function scope
+            let y =2; //block scope
+            const z =3; // block
+            if (true)//inside this block
+            {
+                var x =10; //reassing x (function)
+                let y =20; //y only for this block
+                const z =30; //zonly for this block
+                 document.write(x);//10
+                 document.write(y); //20
+                 document.write(z); //30
+                 document.write("<br>");//10 20 30
+            }
+            // 
+             document.write(x);//10
+                 document.write(y); //2
+                 document.write(z); //3
+                 document.write("<br>");//10 2 3
+        }
+     </script>
+</body>
+</html>
