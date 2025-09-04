@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>digital clock</h1>
+    <h1 id="clock"></h1>
+
+     <h1>conter</h1>
+    <h1 id="count"></h1>
+   <button onclick="stopcounter()"></button>
+
+   <h3 id = "msg">hi krushna how are you......</h3>
+   <script>
+    setTimeout(function(){
+        document.getElementById('msg').innerHTML=" hii krushna iam fine..... how r u";
+    },5000);
+   </script>
+
+    <script>
+        function count = 0;
+            let counter= setInterval(function(){
+            count ++;
+           document.getElementById("count").innerHTML=count;
+            },1000);
+            
+             function stopcounter(){
+                clearInterval(counter);
+             }
+             </script>
+    <script>
+        function showTime (){
+            let now=new = Date();
+            let time=now.toLocaleTimeString();
+            document.getElementById("clock").innerHTML=time;
+
+        }
+        setInterval(showTime,1000);
+            
+      
+    </script>
+</body>
+</html>
